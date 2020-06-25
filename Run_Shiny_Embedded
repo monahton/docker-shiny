@@ -1,0 +1,9 @@
+# Launch container with embedded Shiny App
+
+# This stack will launch app available in the embedded folder
+docker run --rm -p 3838:3838 \
+    -v /Users/vladdsm/shinylog/:/var/log/shiny-server/ \
+    vladdsm/docker-shiny
+# access using http://0.0.0.0:3838
+
+# check application log by checking a folder `shinylog` mapped to the local machine

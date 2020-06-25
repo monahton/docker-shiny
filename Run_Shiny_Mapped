@@ -1,0 +1,10 @@
+# Launch container with Shiny Server and Mapped Shiny App locally stored in computer
+
+# This stack will launch apps available in the mapped folder
+docker run --rm -p 3838:3838 \
+    -v /Users/vladdsm/shinyapps/:/srv/shiny-server/ \
+    -v /Users/vladdsm/shinylog/:/var/log/shiny-server/ \
+    vladdsm/docker-shiny
+# access using http://0.0.0.0:3838/test/ , assumed app is stored in the folder `/Users/vladdsm/shinyapps/test/app.R`
+
+# check application log by checking a folder `shinylog` mapped to the local machine
